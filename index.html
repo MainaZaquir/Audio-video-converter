@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio-Video Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            margin-top: 5px;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        #output {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Audio-Video Converter</h1>
+    <label>
+        <span>Convert audio to video:</span>
+        <input type="file" id="audioFile" accept=".mp3, .wav">
+        <input type="text" id="outputVideoFile" placeholder="Output video file path">
+        <button onclick="convertAudioToVideo()">Convert</button>
+    </label>
+
+    <label>
+        <span>Convert video to audio:</span>
+        <input type="file" id="videoFile" accept=".mp4">
+        <input type="text" id="outputAudioFile" placeholder="Output audio file path">
+        <button onclick="convertVideoToAudio()">Convert</button>
+    </label>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
